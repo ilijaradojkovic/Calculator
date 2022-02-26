@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bcg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Three_Number"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+
+        android:layout_marginEnd="12dp"
+
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:onClick="threeClicked"
+        android:shadowColor="@color/white"
+        android:text="3"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Zero_Number"
+        app:layout_constraintEnd_toStartOf="@+id/equals_Sign" />
+
+    <TextView
+        android:id="@+id/Two_Number"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape"
+
+        android:elevation="10dp"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+        android:onClick="twoClicked"
+        android:text="2"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Zero_Number"
+        app:layout_constraintEnd_toStartOf="@+id/Three_Number" />
+
+    <TextView
+        android:id="@+id/Plus_Operation"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+        android:onClick="plusClicked"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape_purple"
+        android:elevation="10dp"
+
+        android:gravity="center"
+
+        android:shadowColor="@color/white"
+        android:text="+"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/equals_Sign"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Righ_Bracet_Operation"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="32dp"
+
+        android:background="@drawable/button_shape_orange"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:onClick="desnaZagradaClicked"
+
+        android:shadowColor="@color/white"
+        android:text=")"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Procent_Operation"
+        app:layout_constraintEnd_toStartOf="@+id/Multipy_Operation" />
+
+    <TextView
+        android:id="@+id/Multipy_Operation"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape_purple"
+        android:elevation="10dp"
+        android:onClick="multiplyClicked"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+
+        android:text="*"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Devision_Operation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Left_Bracet_Sign"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+
+        android:layout_marginEnd="15dp"
+
+        android:onClick="levaZagradaClicked"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape_orange"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+
+        android:text="("
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Procent_Operation"
+        app:layout_constraintEnd_toStartOf="@+id/Righ_Bracet_Operation" />
+
+    <TextView
+        android:id="@+id/Delete_Operation"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/orangle"
+        android:elevation="10dp"
+        android:gravity="center"
+
+        android:onClick="deleteElement"
+
+        android:shadowColor="@color/white"
+        android:text="C"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Procent_Operation"
+        app:layout_constraintEnd_toStartOf="@+id/Left_Bracet_Sign"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/equals_Sign"
+        android:layout_width="83dp"
+        android:layout_height="184dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/purple_light"
+
+        android:elevation="10dp"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+
+
+        android:text="="
+
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Procent_Operation"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/button_shape_orange"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:onClick="procentClicked"
+
+        android:shadowColor="@color/white"
+        android:text="%"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Eight_Number"
+        app:layout_constraintEnd_toStartOf="@+id/Devision_Operation" />
+
+    <TextView
+        android:id="@+id/Devision_Operation"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape_purple"
+        android:onClick="devisionClicked"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+
+        android:text="÷"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Minus_Operation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Zero_Number"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/button_shape"
+        android:clickable="true"
+        android:elevation="10dp"
+        android:focusable="true"
+        android:gravity="center"
+        android:onClick="zeroClicked"
+        android:shadowColor="@color/white"
+
+        android:tag="0"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/equals_Sign"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Nine_Number"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+        android:onClick="nineClicked"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape"
+
+        android:elevation="10dp"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+
+        android:text="9"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Six_Number"
+        app:layout_constraintEnd_toStartOf="@+id/Minus_Operation" />
+
+    <TextView
+        android:id="@+id/Seven_Number"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+        android:onClick="sevenClicked"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="15dp"
+
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+
+        android:text="7"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Four_Number"
+        app:layout_constraintEnd_toStartOf="@+id/Eight_Number"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Eight_Number"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+
+        android:layout_marginEnd="15dp"
+        android:onClick="eightClicked"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+
+        android:text="8"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Five_Number"
+        app:layout_constraintEnd_toStartOf="@+id/Nine_Number" />
+
+    <TextView
+        android:id="@+id/Minus_Operation"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="subClicked"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape_purple"
+        android:elevation="10dp"
+        android:gravity="center"
+
+        android:shadowColor="@color/white"
+
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Plus_Operation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Six_Number"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape"
+        android:onClick="sixClicked"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+
+        android:text="6"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Three_Number"
+        app:layout_constraintEnd_toStartOf="@+id/Plus_Operation" />
+
+    <TextView
+        android:id="@+id/Four_Number"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+
+        android:layout_marginStart="16dp"
+        android:onClick="fourClicked"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+
+        android:text="4"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/One_Number"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Five_Number"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+
+        android:background="@drawable/button_shape"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+        android:onClick="fiveClicked"
+        android:text="5"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Two_Number"
+        app:layout_constraintEnd_toStartOf="@+id/Six_Number" />
+
+    <TextView
+        android:id="@+id/One_Number"
+        android:layout_width="83dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:onClick="oneClicked"
+
+        android:shadowColor="@color/white"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Zero_Number"
+        app:layout_constraintEnd_toStartOf="@+id/Two_Number"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="83dp"
+        android:layout_height="184dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="izracunajIzraz"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/button_shape"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:backgroundTint="@color/purple_light"
+
+        android:shadowColor="@color/white"
+
+        android:text="="
+
+        android:textStyle="bold"
+        android:textAlignment="center"
+
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/Result"
+        android:layout_width="302dp"
+        android:layout_height="45dp"
+        android:gravity="right"
+        android:textSize="40dp"
+        android:hint="Result"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
